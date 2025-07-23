@@ -1,0 +1,147 @@
+body {
+  font-family: 'Noto Sans', 'Noto Sans JP', 'sans-serif';
+  font-size: 16px;
+  letter-spacing: 0.025em;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* textarea */
+.custom-textarea {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  border-color: #9c9c9c;
+  resize: vertical;
+}
+
+.custom-textarea::placeholder {
+  font-size: 24px;
+  color: #757575;
+}
+
+/* language */
+.custom-language {
+  display: block; 
+  margin: 10px auto -10px;
+  height: 52px;
+  font-size: 16px;
+  border: none;
+  color: #757575;
+}
+
+/* button */
+.custom-button:disabled {
+  background-color: #9c9c9c;
+  cursor: not-allowed;
+  opacity: 1; /* 必要なら視認性を保つ */
+}
+.custom-button {
+  height: 52px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+}
+
+/* Result */
+.custom-result {
+  padding: 50px 100px;
+  margin-top:40px;
+  margin-bottom:120px;
+  background: #F9F9F9;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.placeholder-text {
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+  color: #757575;
+  font-style: italic;
+}
+
+.translated-text {
+  font-family: 'Noto Serif', 'Noto Serif JP', serif;
+  color: #333333;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.5em;
+}
+
+.loading-gif {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* History */
+.custom-history {
+}
+
+.custom-history ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.custom-history li {
+  margin-bottom: 24px;
+  list-style: none;
+  font-size: 14px;
+  gap: 4px;
+}
+
+.custom-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -12px;
+}
+
+.custom-history-language {
+  font-size: 12px;
+  color: #4a4a4a;
+}
+
+.custom-history-time {
+  font-size: 12px;
+  color: #757575;
+}
+
+.custom-history-text {
+  margin-bottom: -16px;
+}
+
+.custom-history-result {
+  color: #757575;
+}
+
+
+@media (max-width: 640px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .custom-textarea,
+  .custom-result,
+  .custom-button {
+    max-width: 100%;
+    min-width: auto;
+    box-sizing: border-box;
+  }
+}
