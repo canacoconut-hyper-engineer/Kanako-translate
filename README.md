@@ -13,6 +13,11 @@ Users can enter text in any language and receive translations via OpenAI.
 - **Persistence:** JSON file storage
 - **Testing:** ExUnit (Elixir's built-in test framework)
 
+### Furthermore, if I had more time
+- Database for schalability
+  In a real-world setting, I’d consider PostgreSQL and separating environments, but opted for JSON for speed.
+- Authentication & User Persistence
+- Added integration tests (e.g., frontend-backend flow) beyond unit tests.
 
 
 ## 🚀 Features
@@ -33,8 +38,6 @@ I envisioned this app as a **book-reading companion**, and designed features wit
   - The **Translate** button is disabled until the user inputs text
   - A **friendly loading animation** plays when translating, and the button shows “Translating…”
   - The translated result appears in **literature-friendly serif typography**
-
-
 
 ## 🛠️ Setup Instructions
 
@@ -158,8 +161,7 @@ translate_api/
 ├── config/config.exs               # Basic app configuration
 ├── data/history.json               # Stores translation history (production)
 ├── tmp/test_history.json           # Stores translation history for testing
-├── mix.exs                         # Project definition and dependencies
-├── README.md                       # Project overview and documentation
+└── mix.exs                         # Project definition and dependencies
 
 ### Frontend - translate-app/
 translate-app/
@@ -182,11 +184,12 @@ translate-app/
 │   ├── App.js                 # Root app layout and logic
 │   └── index.js               # React entry point
 │
-├── package.json               # Project config and dependencies
-└── README.md                  # Project documentation
+└── package.json               # Project config and dependencies
+
 
 ## Clone this repository
 
 ```bash
 git clone https://github.com/canacoconut-hyper-engineer/Kanako-translate
 cd your-repo-name
+
