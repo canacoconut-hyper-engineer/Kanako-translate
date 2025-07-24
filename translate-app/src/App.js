@@ -55,7 +55,6 @@ export default function App() {
     <div className="App" style={{ padding: "2rem", maxWidth: "600px", margin: "0 auto", width: "100%"}}>
       {/* <h1>Text Translator</h1> */}
 
-      {/* Textarea */}
       <textarea
         className="custom-textarea"
         rows="4"
@@ -65,7 +64,6 @@ export default function App() {
       />
       <br />
 
-      {/* Language */}
       <select
         className="custom-language"
         value={targetLanguage}
@@ -79,7 +77,6 @@ export default function App() {
       </select>
       <br />
 
-      {/* Translate Button */}
       <button
         className="custom-button"
         onClick={handleTranslate}
@@ -92,7 +89,6 @@ export default function App() {
           : "Translate"}
       </button>
 
-      {/* Translate Result */}
       <div className="custom-result">
         {loading ? (
           <img
@@ -110,7 +106,6 @@ export default function App() {
         )}
       </div>
 
-      {/* History */}
       <div className="custom-history">
         <History history={historyData} />
       </div>
