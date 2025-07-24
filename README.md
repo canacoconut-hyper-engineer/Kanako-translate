@@ -14,8 +14,7 @@ Users can enter text in any language and receive translations via OpenAI.
 - **Testing:** ExUnit (Elixir's built-in test framework)
 
 ### Furthermore, if I had more time
-- Database for schalability
-  In a real-world setting, I’d consider PostgreSQL and separating environments, but opted for JSON for speed.
+- Database for schalability - I’d consider PostgreSQL, but opted for JSON for speed.
 - Authentication & User Persistence
 - Added integration tests (e.g., frontend-backend flow) beyond unit tests.
 
