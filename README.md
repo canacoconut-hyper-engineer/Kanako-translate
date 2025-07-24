@@ -32,7 +32,7 @@ I envisioned this app as a **book-reading companion**, and designed features wit
   - A **friendly loading animation** plays when translating, and the button shows “Translating…”
   - The translated result appears in **literature-friendly serif typography**
  
-## 🔭　Furthermore, if I had more time
+## 🔭 Furthermore, if I had more time
 - Database for scalability - I’d consider PostgreSQL, but opted for JSON for speed.
 - Add pagination, delete and filter (date, content, language, etc) functions for the history.
 - Authentication & User Persistence
