@@ -58,18 +58,19 @@ I envisioned this app as a **book-reading companion**, and designed features wit
     cp .env.example .env
     ```
 
-4. Open the `.env` file and **add your OpenAI API key** like this:
+3. `.env.example` を元に `.env` ファイルを作成：
 
-    ```ini
-    OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    ```bash
+    cp .env.example .env
     ```
 
-    🔑 You can get your API key from the [official OpenAI site](https://platform.openai.com/account/api-keys).
+4. `.env` を開いて **OpenAI APIキー** を追加：
 
-    #### 🔐 Environment Variables
-    
-    - `.env` is listed in `.gitignore`, so it will **not be committed to GitHub**.
-    - For security reasons, **never share your actual API key publicly**.
+    ```ini
+    OPENAI_API_KEY=your-openai-api-key
+    ```
+
+    🔑 [OpenAI API Key 発行はこちら](https://platform.openai.com/account/api-keys)
 
 5. Start the backend server:
 
@@ -92,13 +93,28 @@ I envisioned this app as a **book-reading companion**, and designed features wit
     npm install
     ```
 
-3. Start the frontend development server:
+3. `.env.example` をもとに `.env` を作成：
+
+    ```bash
+    cp .env.example .env
+    ```
+
+4. `.env` を開いて **API接続情報** を設定：
+
+    ```ini
+    OPENAI_API_KEY=your-openai-api-key
+    BASE_URL=http://localhost:4000
+    ```
+
+    ※ `BASE_URL` はバックエンド（Elixir）のURLです。必要に応じて変更してください。
+
+5. Start the frontend development server:
 
     ```bash
     npm run dev
     ```
 
-4. Open the app in your browser:
+6. Open the app in your browser:
 
     ```
     http://localhost:3000
