@@ -58,21 +58,21 @@ I envisioned this app as a **book-reading companion**, and designed features wit
     cp .env.example .env
     ```
 
-3. `.env.example` を元に `.env` ファイルを作成：
+3. Create a `.env` file based on `.env.example`:
 
     ```bash
     cp .env.example .env
     ```
 
-4. `.env` を開いて **OpenAI APIキー** を追加：
+5. Open `.env` and add your OpenAI API key:
 
     ```ini
     OPENAI_API_KEY=your-openai-api-key
     ```
 
-    🔑 [OpenAI API Key 発行はこちら](https://platform.openai.com/account/api-keys)
+   🔑 You can get your API key from the official OpenAI website: https://platform.openai.com/account/api-keys
 
-5. Start the backend server:
+7. Start the backend server:
 
     ```bash
     mix run --no-halt
@@ -93,20 +93,20 @@ I envisioned this app as a **book-reading companion**, and designed features wit
     npm install
     ```
 
-3. `.env.example` をもとに `.env` を作成：
+3. Create a `.env` file based on `.env.example`:
 
     ```bash
     cp .env.example .env
     ```
 
-4. `.env` を開いて **API接続情報** を設定：
+4. Open `.env` and add your environment variables:
 
     ```ini
     OPENAI_API_KEY=your-openai-api-key
     BASE_URL=http://localhost:4000
     ```
 
-    ※ `BASE_URL` はバックエンド（Elixir）のURLです。必要に応じて変更してください。
+    ※ BASE_URL is the address where your backend API is running.
 
 5. Start the frontend development server:
 
@@ -120,6 +120,9 @@ I envisioned this app as a **book-reading companion**, and designed features wit
     http://localhost:3000
     ```
 
+**🔐 Environment & Security Notes**
+- .env files are listed in .gitignore, so they will not be pushed to GitHub.
+- Never share your real API keys publicly.
 
 ### 🧪 Running Tests (Backend only)
 
