@@ -13,9 +13,9 @@ Users can enter text in any language and receive translations via OpenAI.
 - **Persistence:** JSON file storage
 - **Testing:** ExUnit (Elixir's built-in test framework)
 
-## 🚀 Features
+## 📚 Features
 
-### 📚　Book-Reading Companion Design
+### Book-Reading Companion Design
 
 As a bonus feature, I added enhancements that could benefit the user experience.  
 I also wanted to showcase my design thinking as a UI/UX designer in this part.  
@@ -39,7 +39,7 @@ I envisioned this app as a **book-reading companion**, and designed features wit
 - Added integration tests (e.g., frontend-backend flow) beyond unit tests.
 
 
-## 🛠️ Setup Instructions
+## 🚀 How to run
 
 ### 🔁 Backend (Elixir API)
 
