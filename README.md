@@ -13,12 +13,6 @@ Users can enter text in any language and receive translations via OpenAI.
 - **Persistence:** JSON file storage
 - **Testing:** ExUnit (Elixir's built-in test framework)
 
-### Furthermore, if I had more time
-- Database for schalability - I’d consider PostgreSQL, but opted for JSON for speed.
-- Authentication & User Persistence
-- Added integration tests (e.g., frontend-backend flow) beyond unit tests.
-
-
 ## 🚀 Features
 
 ### 📚　Book-Reading Companion Design
@@ -37,6 +31,13 @@ I envisioned this app as a **book-reading companion**, and designed features wit
   - The **Translate** button is disabled until the user inputs text
   - A **friendly loading animation** plays when translating, and the button shows “Translating…”
   - The translated result appears in **literature-friendly serif typography**
+ 
+## 🔭　Furthermore, if I had more time
+- Database for scalability - I’d consider PostgreSQL, but opted for JSON for speed.
+- Add pagination, delete and filter (date, content, language, etc) functions for the history.
+- Authentication & User Persistence
+- Added integration tests (e.g., frontend-backend flow) beyond unit tests.
+
 
 ## 🛠️ Setup Instructions
 
