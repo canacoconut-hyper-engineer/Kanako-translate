@@ -23,6 +23,12 @@ I envisioned this app as a **book-reading companion**, and designed features wit
 
 - 📱 **Responsive Design**:
   Users will be able to use this app in any circumstance.
+- 📝 **Confortable Typography**: 
+  Used Noto Sans and Noto Serif — globally trusted fonts designed for readability and broad language support, ideal for future multilingual scalability.
+- 🎨 **Accessible Colour Contrast**: 
+  Color contrast, especially for text, meets WCAG AA standards to ensure readability and accessibility.
+- 🎯 **Visual Hierarchy**: 
+  Used font size and layout to guide user focus and improve readability.
 - 📜 **Translation History**:
     Users can revisit previous translations anytime.
 - 🧭 **Smooth and Simple User Flow**:
@@ -32,11 +38,19 @@ I envisioned this app as a **book-reading companion**, and designed features wit
   - A **friendly loading animation** plays when translating, and the button shows “Translating…”
   - The translated result appears in **literature-friendly serif typography**
  
+## 🧹 Code Quality
+- I kept the backend modular with clear separation of concerns (e.g., `router`, `controller`, `services`).
+- Used descriptive function names and consistent formatting for readability.
+- Added simple unit tests to cover core logic and ensure confidence during changes.
+- `.env` is gitignored and follows `.env.example` format to avoid leaking sensitive info
+- Before submission, I asked 3–5 senior engineer connections to review the code and incorporated their feedback to improve structure and clarity.
+
 ## 🔭 Furthermore, if I had more time
 - Database for scalability - I’d consider PostgreSQL, but opted for JSON for speed.
 - Add pagination, delete and filter (date, content, language, etc) functions for the history.
 - Authentication & User Persistence
 - Added integration tests (e.g., frontend-backend flow) beyond unit tests.
+- UX idea: AI-powered history organisation: user translations are analysed by AI, linked to relevant books and articles, and automatically organised into a structured virtual bookshelf. This helps users not only translate, but build lasting, personalised knowledge collections.
 
 
 ## 🚀 How to run
@@ -122,28 +136,37 @@ I envisioned this app as a **book-reading companion**, and designed features wit
     ```
     http://localhost:3000
     ```
-
 **🔐 Environment & Security Notes**
 - .env files are listed in .gitignore, so they will not be pushed to GitHub.
 - Never share your real API keys publicly.
 
-### 🧪 Running Tests (Backend only)
+### 🧪 Backend Testing (ExUnit)
+Tests are written using Elixir's built-in test framework, ExUnit.
+These tests cover API routing, translation history handling, and response behavior for both valid and invalid requests.
 
-To run backend tests:
-
+To run tests:
 ```bash
+cd translate_api
 mix test
 ```
-Tests cover the following (via ExUnit):
 
-- POST /translate
-- GET /history
-- Handling of invalid requests
+Test cases cover:
+- POST /translate: Successful and invalid requests
+- GET /history: Successful retrieval of stored translations
+
+Test files:
+```bash
+translate_api/test/
+├── history_test.exs          # Tests for reading/writing history
+├── router_test.exs           # Endpoint routing and request handling
+└── translate_api_test.exs    # Application setup and coverage
+```
 
 
 ## 📁 Project Structure
 
 ### Backend - translate_api/
+```bash
 translate_api/
 ├── lib/translate_api/               # Main backend logic (controllers, routing, AI service, history persistence)
 │   ├── application.ex               # Application entry point
@@ -153,17 +176,19 @@ translate_api/
 │   ├── translate_controller.ex      # Handles translation requests
 │   └── translate_api.ex             # Main supervision tree
 │
-├── test/                            # Test files using ExUnit
-│   ├── history_test.exs
-│   ├── router_test.exs
-│   └── translate_api_test.exs
+├── test/                            # Backend test files using ExUnit
+│   ├── history_test.exs             # Tests translation history persistence
+│   ├── router_test.exs              # Tests API routes and HTTP response behavior
+│   └── translate_api_test.exs       # Tests the main translation flow and edge cases
 │
 ├── config/config.exs               # Basic app configuration
 ├── data/history.json               # Stores translation history (production)
 ├── tmp/test_history.json           # Stores translation history for testing
 └── mix.exs                         # Project definition and dependencies
+```
 
 ### Frontend - translate-app/
+```bash
 translate-app/
 ├── public/                     # Static assets
 │   ├── Book.gif               # Loading animation
@@ -185,11 +210,5 @@ translate-app/
 │   └── index.js               # React entry point
 │
 └── package.json               # Project config and dependencies
-
-
-## Clone this repository
-
-```bash
-git clone https://github.com/canacoconut-hyper-engineer/Kanako-translate
-cd your-repo-name
+```
 
