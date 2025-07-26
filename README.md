@@ -38,7 +38,7 @@ I envisioned this app as a **book-reading companion**, and designed features wit
   - A **friendly loading animation** plays when translating, and the button shows “Translating…”
   - The translated result appears in **literature-friendly serif typography**
  
-## 🧹 Code Quality
+### 🧹 Code Quality
 - I kept the backend modular with clear separation of concerns (e.g., `router`, `controller`, `services`).
 - Used descriptive function names and consistent formatting for readability.
 - Added simple unit tests to cover core logic and ensure confidence during changes.
