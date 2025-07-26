@@ -8,7 +8,7 @@ I chose the **Text Translation** feature for this project because it's both univ
 
 ## 🔧 Tech Stack
 
-- **Frontend:** React
+- **Frontend:** React (Create React App - CRA)
 - **Backend:** Elixir + Plug + Req
 - **AI Service:** OpenAI GPT-3.5-turbo (via Chat Completion API)
 - **Persistence:** JSON file storage
@@ -137,16 +137,18 @@ Before running the app, make sure the following tools are installed on your syst
     ※ BASE_URL is the address where your backend API is running.
 
 5. Start the frontend development server:
+   Built with React using **Create React App**.  
 
     ```bash
     npm start
     ```
 
-6. Open the app in your browser:
+7. Open the app in your browser:
 
     ```
     http://localhost:3000
     ```
+    
     
 **🔐 Environment & Security Notes**
 - .env files are listed in .gitignore, so they will not be pushed to GitHub.
