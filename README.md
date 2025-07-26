@@ -3,6 +3,7 @@
 This is a one-page AI-powered translation app.  
 Users can enter text in any language and receive translations via OpenAI.
 
+I chose the **Text Translation** feature for this project because it's both universally useful and ideal for demonstrating interaction design, API integration, and multilingual UX thinking in a simple UI.
 
 
 ## 🔧 Tech Stack
@@ -44,13 +45,16 @@ I envisioned this app as a **book-reading companion**, and designed features wit
 - Added simple unit tests to cover core logic and ensure confidence during changes.
 - `.env` is gitignored and follows `.env.example` format to avoid leaking sensitive info
 - Before submission, I consulted 3–5 senior engineer connections to review the code and incorporated their feedback to improve structure and clarity.
+- While I focused mainly on unit tests due to time constraints, integration tests (e.g., frontend-backend communication) are planned as a next step.
+
 
 ## 🔭 Furthermore, if I had more time
-- Database for scalability - I’d consider PostgreSQL, but opted for JSON for speed.
-- Add pagination, delete and filter (date, content, language, etc) functions for the history.
-- Authentication & User Persistence
-- Added integration tests (e.g., frontend-backend flow) beyond unit tests.
-- UX idea: AI-powered history organisation: user translations are analysed by AI, linked to relevant books and articles, and automatically organised into a structured virtual bookshelf. This helps users not only translate, but build lasting, personalised knowledge collections.
+- Use a database like PostgreSQL for better scalability (JSON chosen for speed).
+- Add pagination, delete and filter (by date, content, language, etc.) in history.
+- Add user authentication & persistence.
+- Implement integration tests.
+- UX idea: AI-powered history organisation — user translations are analysed by AI, linked to relevant books and articles, and automatically organised into a virtual bookshelf. This helps users not only translate but also build lasting, personalised knowledge collections.
+  
 
 ## 🚀 How to run
 
@@ -88,21 +92,15 @@ Before running the app, make sure the following tools are installed on your syst
     cp .env.example .env
     ```
 
-3. Create a `.env` file based on `.env.example`:
+4. Open `.env` and add your OpenAI API key:
 
-    ```bash
-    cp .env.example .env
-    ```
-
-5. Open `.env` and add your OpenAI API key:
-
-    ```ini
+    ```env
     OPENAI_API_KEY=your-openai-api-key
     ```
 
    🔑 You can get your API key from the official OpenAI website: https://platform.openai.com/account/api-keys
 
-7. Start the backend server:
+5. Start the backend server:
 
     ```bash
     mix run --no-halt
@@ -131,7 +129,7 @@ Before running the app, make sure the following tools are installed on your syst
 
 4. Open `.env` and add your environment variables:
 
-    ```ini
+    ```env
     OPENAI_API_KEY=your-openai-api-key
     BASE_URL=http://localhost:4000
     ```
@@ -149,6 +147,8 @@ Before running the app, make sure the following tools are installed on your syst
     ```
     http://localhost:3000
     ```
+
+    
 **🔐 Environment & Security Notes**
 - .env files are listed in .gitignore, so they will not be pushed to GitHub.
 - Never share your real API keys publicly.
