@@ -66,9 +66,9 @@ Before running the app, make sure the following tools are installed on your syst
   👉 Install guide: https://elixir-lang.org/install.html
 - **Erlang/OTP** ≥ 26
   - Required to run Elixir 1.15 properly. Often bundled with Elixir installation (e.g., via asdf).
-- **Node.js** ≥ 18  
+- **Node.js** ≥ 16 
   👉 Install: https://nodejs.org/
-- **npm** ≥ 9  
+- **npm** ≥ 8  
   Comes bundled with Node.js
 
 
@@ -147,7 +147,6 @@ Before running the app, make sure the following tools are installed on your syst
     ```
     http://localhost:3000
     ```
-
     
 **🔐 Environment & Security Notes**
 - .env files are listed in .gitignore, so they will not be pushed to GitHub.
