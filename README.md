@@ -44,7 +44,7 @@ I envisioned this app as a **book-reading companion**, and designed features wit
 - Used descriptive function names and consistent formatting for readability.
 - Added unit and integration tests to cover core logic and API behavior.
 - `.env` is gitignored and follows `.env.example` format to avoid leaking sensitive info
-- Before submission, I consulted 3–5 senior engineers connections to review the code and incorporated their feedback to improve structure and clarity.
+- Before submission, I consulted 3–5 senior engineers on LinkedIn to review the code and files to improve structure and clarity.
 
 ## 🔭 Furthermore, if I had more time
 - Use a database like PostgreSQL for better scalability (JSON chosen for speed).
@@ -162,7 +162,7 @@ The tests are self-contained, reset their state on each run using a temporary fi
 cd translate_api
 mix test
 ```
-※ Frontend-level tests (e.g., using React Testing Library or Vitest) are currently not included but can be added if it's neeeded in future.
+※ Frontend-level tests (e.g., using React Testing Library or Vitest) are currently not included but can be added if needed in the future.
 
 
 ## 📁 Project Structure
