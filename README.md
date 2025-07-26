@@ -8,7 +8,7 @@ I chose the **Text Translation** feature for this project because it's both univ
 
 ## 🔧 Tech Stack
 
-- **Frontend:** React (Vite)
+- **Frontend:** React
 - **Backend:** Elixir + Plug + Req
 - **AI Service:** OpenAI GPT-3.5-turbo (via Chat Completion API)
 - **Persistence:** JSON file storage
