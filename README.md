@@ -11,7 +11,6 @@ I chose the **Text Translation** feature for this project because it's both univ
 - **Frontend:** React (Create React App - CRA)
 - **Backend:** Elixir + Plug + Req
 - **AI Service:** OpenAI GPT-3.5-turbo (via Chat Completion API)
-- **Persistence:** JSON file storage
 - **Testing:** ExUnit (Elixir's built-in test framework)
 
 ## 📚 Features
@@ -154,26 +153,35 @@ Before running the app, make sure the following tools are installed on your syst
 - Never share your real API keys publicly.
 
 ## 🧪 Backend Testing (ExUnit)
-Tests are written using Elixir's built-in test framework, ExUnit.
-These tests cover API routing, translation history handling, and response behavior for both valid and invalid requests.
 
-To run tests:
+This project includes automated unit and integration tests using Elixir’s built-in test framework, **ExUnit**, and **Plug.Test**.
+
+These tests simulate actual HTTP requests to API endpoints (e.g., `POST /translate`, `GET /history`), and verify full backend behavior including:
+- Routing
+- JSON parsing
+- OpenAI API call (real call, not mocked)
+- Response structure and status codes
+- History persistence logic
+
+The tests are self-contained, reset their state on each run using a temporary file (`tmp/test_history.json`), and are executed with a single command:
+
 ```bash
 cd translate_api
 mix test
 ```
 
-Test cases cover:
-- POST /translate: Successful and invalid requests
-- GET /history: Successful retrieval of stored translations
-
 Test files:
 ```bash
 translate_api/test/
 ├── history_test.exs          # Tests for reading/writing history
-├── router_test.exs           # Endpoint routing and request handling
-└── translate_api_test.exs    # Application setup and coverage
+├── router_test.exs           # Tests API routes and HTTP response behavior
+└── translate_api_test.exs    # Tests the main translation flow and edge cases
 ```
+
+### 🧪 Future Testing Ideas
+
+- Frontend-level tests (e.g., using React Testing Library or Vitest) are currently not included but can be added in future iterations.
+
 
 
 ## 📁 Project Structure
@@ -190,9 +198,9 @@ translate_api/
 │   └── translate_api.ex             # Main supervision tree
 │
 ├── test/                            # Backend test files using ExUnit
-│   ├── history_test.exs             # Tests translation history persistence
-│   ├── router_test.exs              # Tests API routes and HTTP response behavior
-│   └── translate_api_test.exs       # Tests the main translation flow and edge cases
+│   ├── history_test.exs
+│   ├── router_test.exs
+│   └── translate_api_test.exs
 │
 ├── config/config.exs               # Basic app configuration
 ├── data/history.json               # Stores translation history (production)
