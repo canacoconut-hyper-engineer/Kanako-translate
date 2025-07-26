@@ -66,7 +66,7 @@ Before running the app, make sure the following tools are installed on your syst
   👉 Install guide: https://elixir-lang.org/install.html
 - **Erlang/OTP** ≥ 26
   - Required to run Elixir 1.15 properly. Often bundled with Elixir installation (e.g., via asdf).
-- **Node.js** (v16 or higher recommended)  
+- **Node.js** ≥v16
   - Needed to run the CRA-based React frontend.  
   👉 https://nodejs.org/
 
