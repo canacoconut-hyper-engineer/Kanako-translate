@@ -8,10 +8,11 @@ I chose the **Text Translation** feature for this project because it's both univ
 
 ## 🔧 Tech Stack
 
-- **Frontend:** React (Create React App - CRA)
+- **Frontend:** React (Create React App)
 - **Backend:** Elixir + Plug + Req
-- **AI Service:** OpenAI GPT-3.5-turbo (via Chat Completion API)
-- **Testing:** ExUnit (Elixir's built-in test framework)
+- **AI Service:** OpenAI GPT-3.5-turbo (Chat Completion API)
+- **Persistence:** JSON file
+- **Testing:** ExUnit (Elixir)
 
 ## 📚 Features
 
@@ -41,11 +42,9 @@ I envisioned this app as a **book-reading companion**, and designed features wit
 ## 🧹 Code Quality
 - I kept the backend modular with clear separation of concerns (e.g., `router`, `controller`, `services`).
 - Used descriptive function names and consistent formatting for readability.
-- Added simple unit tests to cover core logic and ensure confidence during changes.
+- Added unit and integration tests to cover core logic and API behavior.
 - `.env` is gitignored and follows `.env.example` format to avoid leaking sensitive info
-- Before submission, I consulted 3–5 senior engineer connections to review the code and incorporated their feedback to improve structure and clarity.
-- While I focused mainly on unit tests due to time constraints, integration tests (e.g., frontend-backend communication) are planned as a next step.
-
+- Before submission, I consulted 3–5 senior engineers connections to review the code and incorporated their feedback to improve structure and clarity.
 
 ## 🔭 Furthermore, if I had more time
 - Use a database like PostgreSQL for better scalability (JSON chosen for speed).
@@ -154,14 +153,8 @@ Before running the app, make sure the following tools are installed on your syst
 
 ## 🧪 Backend Testing (ExUnit)
 
-This project includes automated unit and integration tests using Elixir’s built-in test framework, **ExUnit**, and **Plug.Test**.
-
-These tests simulate actual HTTP requests to API endpoints (e.g., `POST /translate`, `GET /history`), and verify full backend behavior including:
-- Routing
-- JSON parsing
-- OpenAI API call (real call, not mocked)
-- Response structure and status codes
-- History persistence logic
+Includes automated **unit and integration tests** with ExUnit and Plug.Test.  
+Tests simulate HTTP requests (e.g., `POST /translate`) and validate routing, JSON parsing, OpenAI calls, and persistence.
 
 The tests are self-contained, reset their state on each run using a temporary file (`tmp/test_history.json`), and are executed with a single command:
 
@@ -170,16 +163,8 @@ cd translate_api
 mix test
 ```
 
-Test files:
-```bash
-translate_api/test/
-├── history_test.exs          # Tests for reading/writing history
-├── router_test.exs           # Tests API routes and HTTP response behavior
-└── translate_api_test.exs    # Tests the main translation flow and edge cases
-```
-
 ### 🧪 Future Testing Ideas
-Frontend-level tests (e.g., using React Testing Library or Vitest) are currently not included but can be added in future iterations.
+Frontend-level tests (e.g., using React Testing Library or Vitest) are currently not included but can be added if it's neeeded.
 
 
 
