@@ -139,7 +139,7 @@ Before running the app, make sure the following tools are installed on your syst
 5. Start the frontend development server:
 
     ```bash
-    npm run dev
+    npm start
     ```
 
 6. Open the app in your browser:
