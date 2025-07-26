@@ -22,13 +22,13 @@ I also wanted to showcase my design thinking as a UI/UX designer in this part.
 I envisioned this app as a **book-reading companion**, and designed features with clean, comfortable typography and layout to enhance readability and usability.  
 
 - 📱 **Responsive Design**:
-  Users will be able to use this app in any circumstance.
-- 📝 **Confortable Typography**: 
+  This app is designed to work seamlessly in any situation.
+- 📝 **Comfortable Typography**: 
   Used Noto Sans and Noto Serif — globally trusted fonts designed for readability and broad language support, ideal for future multilingual scalability.
 - 🎨 **Accessible Colour Contrast**: 
   Color contrast, especially for text, meets WCAG AA standards to ensure readability and accessibility.
 - 🎯 **Visual Hierarchy**: 
-  Used font size and layout to guide user focus and improve readability.
+  I used font sizes and layout to guide user focus and enhance readability.
 - 📜 **Translation History**:
     Users can revisit previous translations anytime.
 - 🧭 **Smooth and Simple User Flow**:
@@ -43,7 +43,7 @@ I envisioned this app as a **book-reading companion**, and designed features wit
 - Used descriptive function names and consistent formatting for readability.
 - Added simple unit tests to cover core logic and ensure confidence during changes.
 - `.env` is gitignored and follows `.env.example` format to avoid leaking sensitive info
-- Before submission, I asked 3–5 senior engineer connections to review the code and incorporated their feedback to improve structure and clarity.
+- Before submission, I consulted 3–5 senior engineer connections to review the code and incorporated their feedback to improve structure and clarity.
 
 ## 🔭 Furthermore, if I had more time
 - Database for scalability - I’d consider PostgreSQL, but opted for JSON for speed.
@@ -52,8 +52,21 @@ I envisioned this app as a **book-reading companion**, and designed features wit
 - Added integration tests (e.g., frontend-backend flow) beyond unit tests.
 - UX idea: AI-powered history organisation: user translations are analysed by AI, linked to relevant books and articles, and automatically organised into a structured virtual bookshelf. This helps users not only translate, but build lasting, personalised knowledge collections.
 
-
 ## 🚀 How to run
+
+### ⚙️ Prerequisites
+Before running the app, make sure the following tools are installed on your system:
+
+- **Elixir** ≥ 1.15
+  - This project uses Plug, Plug.Cowboy, and modern .env loading via Dotenvy, which require Elixir 1.14 or higher, but 1.15 is recommended for stability and compatibility.
+  👉 Install guide: https://elixir-lang.org/install.html
+- **Erlang/OTP** ≥ 26
+  - Required to run Elixir 1.15 properly. Often bundled with Elixir installation (e.g., via asdf).
+- **Node.js** ≥ 18  
+  👉 Install: https://nodejs.org/
+- **npm** ≥ 9  
+  Comes bundled with Node.js
+
 
 ### 🔁 Backend (Elixir API)
 
