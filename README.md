@@ -179,8 +179,7 @@ translate_api/test/
 ```
 
 ### 🧪 Future Testing Ideas
-
-- Frontend-level tests (e.g., using React Testing Library or Vitest) are currently not included but can be added in future iterations.
+Frontend-level tests (e.g., using React Testing Library or Vitest) are currently not included but can be added in future iterations.
 
 
 
