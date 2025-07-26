@@ -162,7 +162,7 @@ The tests are self-contained, reset their state on each run using a temporary fi
 cd translate_api
 mix test
 ```
-* Frontend-level tests (e.g., using React Testing Library or Vitest) are currently not included but can be added if it's neeeded in future.
+** Frontend-level tests (e.g., using React Testing Library or Vitest) are currently not included but can be added if it's neeeded in future.
 
 
 ## 📁 Project Structure
