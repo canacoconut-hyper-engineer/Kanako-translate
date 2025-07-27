@@ -168,6 +168,7 @@ mix test
 ## 📁 Project Structure
 
 ### Backend - translate_api/
+
 ```bash
 translate_api/
 ├── lib/translate_api/               # Main backend logic (controllers, routing, AI service, history persistence)
@@ -190,6 +191,7 @@ translate_api/
 ```
 
 ### Frontend - translate-app/
+
 ```bash
 translate-app/
 ├── public/                     # Static assets
