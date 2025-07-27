@@ -44,7 +44,7 @@ I envisioned this app as a **book-reading companion**, and designed features wit
 - Used descriptive function names and consistent formatting for readability.
 - Added unit and integration tests to cover core logic and API behavior.
 - `.env` is gitignored and follows `.env.example` format to avoid leaking sensitive info
-- Before submission, I consulted 3–5 senior engineers on LinkedIn to review the code and files to improve structure and clarity.
+- Before submission, I consulted 3–5 senior engineers in Ireland or the UK via LinkedIn to review the code and files to improve structure and clarity.
 
 ## 🔭 Furthermore, if I had more time
 - Use a database like PostgreSQL for better scalability (JSON chosen for speed).
