@@ -4,7 +4,9 @@ This is a one-page AI-powered translation app.
 Users can enter text in any language and receive translations via OpenAI.
 
 I chose the **Text Translation** feature for this project because it's both universally useful and ideal for demonstrating interaction design, API integration, and multilingual UX thinking in a simple UI.
+This is the final interface image↓
 
+![GIF](./Final_interface.gif)
 
 ## 🔧 Tech Stack
 
